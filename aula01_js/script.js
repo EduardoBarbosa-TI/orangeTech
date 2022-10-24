@@ -1,18 +1,34 @@
-/*
-    Faça um programa para calcular o valor de uma viagem.
-
-    Você terá 3 variáveis. Sendo elas:
-    1 - Preço do combustível do carro por KM;
-    2 - Gasto médio em combustível do carro por KM;
-    3 - Distância em Hm da viagem;
- */
-
-const valueFuel =  5.79;
+const valueEthanol = 5.90;
+const valueGasoline = 5.79;
 const spendingFuelAndKM = 10;
 const distance = 1568;
-
+const typeFuel = 'Etanol';
 const tripValue = distance / spendingFuelAndKM;
-const amountSpent = tripValue * valueFuel;
 
-console.log(amountSpent.toFixed(2))
+if (typeFuel === 'Etanol') {
+    const amountSpent = tripValue * valueEthanol;
+    console.log(amountSpent.toFixed(2))
+} else {
+    const amountSpent = tripValue * valueGasoline;
+    console.log(amountSpent.toFixed(2))
+}
 
+
+
+
+const peso = 65;
+const altura = 1.70;
+const imc = peso/ Math.pow(altura, 2);
+console.log(imc);
+
+if(imc < 18.5){
+    console.log('Abaixo do peso');
+} else if( imc >= 18.5 && imc < 25){
+    console.log('Peso normal');
+} else if ( imc >= 25 && imc < 30){
+    console.log('Acima de peso');
+} else if ( imc >= 30 && imc < 40){
+    console.log('Obsidade');
+} else if ( imc >= 40){
+    console.log('Obsidade');
+}
