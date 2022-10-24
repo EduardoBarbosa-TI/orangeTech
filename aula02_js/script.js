@@ -21,15 +21,14 @@ function classificarImc(imc) {
     }
 }
 
-function main() {
+(function main() {
     const peso = 65;
     const altura = 1.70;
     
     const imc = classificarImc(peso, altura);
     console.log(classificarImc(imc));
-}
+})();
 
-main();
 
 
 
