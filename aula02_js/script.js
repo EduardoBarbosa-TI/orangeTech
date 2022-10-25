@@ -24,11 +24,50 @@ function classificarImc(imc) {
 (function main() {
     const peso = 65;
     const altura = 1.70;
-    
+
     const imc = classificarImc(peso, altura);
     console.log(classificarImc(imc));
 })();
 
 
+function escrevaMeuNome(nome) {
+    console.log("Meu nome é" + nome);
+}
 
+escrevaMeuNome("Eduardo Barbosa Bernardes");
+
+
+function maioridade(idade) {
+    if (idade < 18) {
+        console.log("Menor de idade");
+    } else if (idade >= 18) {
+        console.log("Maior de idade");
+    }
+}
+
+maioridade(18);
+
+function aplicarDesconto(valor, desconto){
+    return (valor - (valor * (desconto / 100)));
+}
+
+function aplicarJuros(valor, juros){
+    return (valor + (valor * (juros / 100)));
+}
+
+function pagamento(formaDePagamento, precoEtiqueta) {
+    if (formaDePagamento === 1) {
+       console.log(aplicarDesconto(precoEtiqueta, 10));
+    } else if (formaDePagamento === 2) {
+        console.log(aplicarDesconto(precoEtiqueta, 20));
+    } else if (formaDePagamento === 3) {
+        console.log(precoEtiqueta);
+    } else {
+        console.log(aplicarJuros(precoEtiqueta, 10));
+    }
+
+}
+
+const precoEtiqueta = 100;
+const formaDePagamento = 1;
 
