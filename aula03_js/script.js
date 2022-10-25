@@ -74,3 +74,8 @@ function compararPessoas(p1, p2){
         console.log(`${p1.nome} e ${p2.nome} tem a mesma idade`);
     }
 }
+
+const eduardo = new Pessoa('Eduardo', 25);
+const vitor = new Pessoa('Vitor', 45);
+
+compararPessoas(eduardo, vitor);
