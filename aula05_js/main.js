@@ -1,20 +1,15 @@
 const {gets, print} = require("./script.js");
 
-print(gets());
-print(gets());
-print(gets());
-print(gets());
-print(gets());
-print(gets());
+let quantidadeDeAlunos = gets();
+let maiorValorEncontrado= 0;
 
 
+for(let i = 0; i < quantidadeDeAlunos; i++){
+    const numeroSorteado = gets();
+    if(numeroSorteado > maiorValorEncontrado){
+         maiorValorEncontrado = numeroSorteado;
+    }
+}
 
+print(maiorValorEncontrado)
 
-const eduardo = {
-    nome:'eduardo'
-};
-
-// const { nome } = pessoa;
-const nome = pessoa.nome;
-
-print(gets());
