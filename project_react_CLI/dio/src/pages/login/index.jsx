@@ -1,5 +1,5 @@
 import { MdEmail, MdLock } from "react-icons/md";
-
+import { Link } from "react-router-dom";
 import { Button } from "../../components/Button";
 import { Header } from "../../components/Header"
 import { Input } from "../../components/Input"
@@ -24,7 +24,9 @@ const Login = () => {
                         <form action="">
                             <Input placeholder="E-mail" leftIcon={<MdEmail/>}/>
                             <Input placeholder="Senha" type="password" leftIcon={<MdLock/>}/>
-                            <Button title="Entrar" variant="secondary"></Button>
+                            <Link to="/feed">
+                                <Button title="Entrar" variant="secondary" type="button"></Button>
+                            </Link>  
                         </form>
                         <Row>
                             <ForgotText>Esqueci minha senha</ForgotText>
