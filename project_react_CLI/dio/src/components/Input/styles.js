@@ -4,7 +4,7 @@ export const InputContainer = styled.div`
     width: 100%;
     max-width: 275px;
     height: 30px;
-    border-radius: 1px solid #303450;
+    border-bottom: 1px solid #303450;
 
     display: flex;
     align-items: center;
@@ -21,4 +21,10 @@ export const InputText = styled.input`
     width: 100%;
     border: 0;
     height: 30px;
+`
+
+export const ErrorText = styled.p`
+    color: #FF0000;
+    font-size: 12px;
+    margin: 5px 0;
 `
