@@ -10,6 +10,7 @@ import { Input } from "../../components/Input";
 
 import { api } from  "../../services/api";
 import {Column, Container, CreateText, ForgotText, Row, SubTitleLogin, Title, TitleLogin, Wrapper} from "./styles";
+import { IFormData } from "./types";
 
 const schema = yup.object({
     email: yup.string().email('email inválido').required('Campo obrigatório'),
@@ -18,14 +19,14 @@ const schema = yup.object({
 
 const Login = () => {
 
-    const { control, handleSubmit, formState: { errors} } = useForm({
+    const { control, handleSubmit, formState: { errors} } = useForm<IFormData>({
         resolver: yupResolver(schema),
         mode: 'onChange',
     });
 
     const navigate = useNavigate();
 
-    const onSubmit = async formData => {
+    const onSubmit = async (formData: IFormData) => {
         try{
             const { data } = await api.get(`users?email=${formData.email}&senha=${formData.password}`);
             if(data.length === 1){
@@ -53,18 +54,12 @@ const Login = () => {
                         <form onSubmit={handleSubmit(onSubmit)}>
                             <Input name="email" errorMessage={errors?.email?.message}  control={control} placeholder="E-mail" leftIcon={<MdEmail/>}/>
                             <Input name="password" errorMessage={errors?.password?.message}  control={control} placeholder="Senha" type="password" leftIcon={<MdLock/>}/>
-                            
-                                <Button title="Entrar" variant="secondary" type="submit"></Button>
-                        
+                            <Button title="Entrar" variant="secondary" type="submit"></Button> 
                         </form>
                         <Row>
                             <ForgotText>Esqueci minha senha</ForgotText>
-                            <CreateText>Criar Conta</CreateText>
-
-                            
+                            <CreateText>Criar Conta</CreateText>  
                         </Row>
-
-                        
                     </Wrapper>
                 </Column>
             </Container>
