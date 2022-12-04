@@ -1,6 +1,19 @@
 {
-    "users": [
-        { "id":1, "name": "Eduardo","email":"eduardobb@rede.ulbra.br", "senha":"123456" },
-        { "id":2, "name": "José","email":"jose@rede.ulbra.br", "senha":"123456"}
-    ]
+  "users": [
+    {
+      "id": 1,
+      "name": "Eduardo",
+      "email": "eduardobb@rede.ulbra.br",
+      "senha": "123456"
+    },
+    {
+      "id": 2,
+      "name": "José",
+      "email": "jose@rede.ulbra.br",
+      "senha": "123456"
+    },
+    {
+      "id": 3
+    }
+  ]
 }
